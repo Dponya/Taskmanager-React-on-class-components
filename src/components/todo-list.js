@@ -4,9 +4,7 @@ export const List = ({ todos }) => {
     const elements = todos.map((item) => {
         return (
             <li>
-                <ListItems
-                    label={item.label}
-                    important={item.important} />
+                <ListItems {...item} />
             </li>
         )
     });
