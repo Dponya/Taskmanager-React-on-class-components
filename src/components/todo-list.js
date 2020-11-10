@@ -2,9 +2,10 @@ import { ListItems } from './list-items';
 
 export const List = ({ todos }) => {
     const elements = todos.map((item) => {
+        const { id, ...itemProps } = item;
         return (
-            <li>
-                <ListItems {...item} />
+            <li key={id}>
+                <ListItems {...itemProps} />
             </li>
         )
     });
