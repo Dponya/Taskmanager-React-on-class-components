@@ -4,7 +4,6 @@ import './todo-list-item.css';
 
 export class TodoListItem extends Component {
 
-
   state = {
     done: false,
     important: false,
