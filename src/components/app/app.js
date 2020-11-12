@@ -41,6 +41,14 @@ export class App extends Component {
         });
     }
 
+    onToggleDone = (text) => {
+        console.log('Done', text);
+    }
+
+    onToggleImportant = (text) => {
+        console.log('Important', text);
+    }
+
     render() {
         return (
             <div className="todo-app">
@@ -50,7 +58,7 @@ export class App extends Component {
                     <ItemStatusFilter />
                 </div>
 
-                <TodoList todos={this.state.todoData} onDeleted={this.deleteItem} />
+                <TodoList todos={this.state.todoData} onDeleted={this.deleteItem} onToggleDone={this.onToggleDone} onToggleImportant={this.onToggleImportant} />
                 <div className="top-panel d-flex">
                     <ButtonPanel addItem={this.addItem} />
                 </div>
