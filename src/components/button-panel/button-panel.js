@@ -13,15 +13,17 @@ export class ButtonPanel extends Component {
     onSubmit = (e) => {
         this.props.addItem(this.state.label);
         e.preventDefault();
+        this.setState({
+            label: ''
+        });
     }
     render() {
         return (<form>
-            <input type="textarea" onChange={this.onLabelChange}>
+            <input type="textarea" onChange={this.onLabelChange} value={this.state.label}>
             </input>
             <button type="submit"
-                className="btn btn-secondary"
-                onClick={this.onSubmit}>
-
+                className="btn btn-secondary" onClick={this.onSubmit}
+            >
                 Add new task
                 </button>
         </form>
