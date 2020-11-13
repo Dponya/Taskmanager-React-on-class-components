@@ -9,8 +9,8 @@ export const TodoList = ({ todos, onDeleted, onToggleDone, onToggleImportant }) 
     return (
       <li key={id} className="list-group-item">
         <TodoListItem {...itemProps} onDeleted={() => onDeleted(id)}
-          onToggleDone={() => onToggleDone('yes')}
-          onToggleImportant={() => onToggleImportant('yes')} />
+          onToggleDone={() => onToggleDone(id)}
+          onToggleImportant={() => onToggleImportant(id)} />
       </li>
     );
   });
