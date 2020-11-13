@@ -64,6 +64,7 @@ export class App extends Component {
     onToggleImportant = (id) => {
         this.setState(({ todoData }) => {
             return { todoData: this.toggleProperty(todoData, id, 'important') }
+            console.log('reworked');
         });
     }
 
